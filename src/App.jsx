@@ -4,7 +4,6 @@ import { ToastContainer } from 'react-toastify';
 import { useLocation, useNavigate } from 'react-router-dom'
 import HomeWrapper from './layout/HomeWrapper';
 import LoginWrapper from './layout/LoginWrapper';
-import ErrorPage from './routes/ErrorPage';
 
 
 const App = () => {
