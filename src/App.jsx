@@ -1,36 +1,26 @@
-import React, { useEffect } from 'react'
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
-import { useLocation, useNavigate } from 'react-router-dom'
-import HomeWrapper from './layout/HomeWrapper';
-import LoginWrapper from './layout/LoginWrapper';
-import ErrorPage from './routes/ErrorPage';
+import React, { Suspense, useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { SyncLoader } from "react-spinners";
+import LoginWrapper from "./layout/LoginWrapper";
 
-
-const App = () => {
-    const location = useLocation();
-    const navigate = useNavigate()
-
-    useEffect(() => {
-        if (!location.pathname || location.pathname === "/") {
-            navigate("/")
-        }
-    }, [location])
-
-    const LoginWrapperRoutes = ["/login", "/register", "/check-email", "/careset-passwordrt", "/verification", "/create-password"]
-    const isLoginRoute = LoginWrapperRoutes.includes(location.pathname);
-
-    return (
-        <>
-            <ToastContainer position='top-right' />
-
-            {isLoginRoute ?
-                <LoginWrapper />
-                :
-                <HomeWrapper />
-            }
-        </>
-    )
+function App() {
+  const [fire, setFire] = useState(false)
+  setTimeout(() => {
+    setFire(true)
+  }, 2000)
+  return (
+    <Router basename={"/euphoria/dev/app/"}>
+      {
+        fire ? <LoginWrapper /> :
+          <div
+            className="flex items-center justify-center w-full"
+            style={{ height: "100vh" }}
+          >
+            <SyncLoader size={20} color="#8A33FD" />
+          </div>
+      }
+    </Router>
+  );
 }
 
-export default App
+export default App;

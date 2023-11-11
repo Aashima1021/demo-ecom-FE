@@ -12,8 +12,8 @@ const LoginWrapper = () => {
     return (
         <>
             <LoginNavbar />
-            <Routes>
-                <Route path="/login" element={<Login />}></Route>
+            <Routes >
+                <Route path="/login" element={<Login />}/>
                 <Route path="/register" element={<Register />}></Route>
                 <Route path="/check-email" element={<CheckEmail />}></Route>
                 <Route path="/reset-password" element={<ResetPassword />}></Route>
