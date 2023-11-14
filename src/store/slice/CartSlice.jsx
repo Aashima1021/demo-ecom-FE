@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {}
 export const fetchCart = createAsyncThunk('cart/fetchCart', async (_, { getState, dispatch }) => {
- // Api call over here of fetch products 
+  // Api call over here of fetch products 
 })
 
 

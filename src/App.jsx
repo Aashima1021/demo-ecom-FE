@@ -11,7 +11,8 @@ function App() {
   }, 1200)
 
   return (
-    <Router basename={"/euphoria/dev/app/"}>
+    // <Router basename={"/euphoria/dev/app/"}>
+    <Router >
       {
         fire ? <LoginWrapper /> :
           <div
