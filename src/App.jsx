@@ -5,9 +5,11 @@ import LoginWrapper from "./layout/LoginWrapper";
 
 function App() {
   const [fire, setFire] = useState(false)
+
   setTimeout(() => {
     setFire(true)
-  }, 2000)
+  }, 1200)
+
   return (
     <Router basename={"/euphoria/dev/app/"}>
       {
@@ -16,7 +18,7 @@ function App() {
             className="flex items-center justify-center w-full"
             style={{ height: "100vh" }}
           >
-            <SyncLoader size={20} color="#8A33FD" />
+            <SyncLoader size={18} color="#8A33FD" />
           </div>
       }
     </Router>

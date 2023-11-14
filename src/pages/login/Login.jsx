@@ -1,14 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import LoginImg from "../../assets/Login.png"
 import GoogleSvg from "../../assets/Google.svg"
 import TwitterSvg from "../../assets/twitter.svg"
 import Input from "../../atoms/Input"
+import { SyncLoader } from "react-spinners";
+import { LoginService } from '../../service/api.service'
+import {toast} from "react-toastify"
+ 
+const Login = ({title}) => {
+    const [isLoading , setLoading] = useState(false)
 
-const Login = () => {
+    const [formData , setFormData] = useState({
+        email : null,
+      
+        password : null
+    })
+
+    const handleSubmit =  (e)=>{
+        console.log("hey");
+        setLoading(true)
+        // e.preventDefault()
+         LoginService(formData).then((res)=>{
+             console.log(res);
+
+             setLoading(false)
+        }).catch((err)=>{
+            setLoading(false)
+            console.log(err);
+            toast.error(err.response.data.message)
+        })
+    }
+
+    console.log(formData);
     return (
         <>
-            <section className="loginForm bg-red-400 flex">
+            <section className="loginForm bg-red-400 flex h-screen" >
                 <div className='bg-gray-600 w-full'>
                     <>
                         <div className=" flex items-center justify-center ">
@@ -20,7 +47,7 @@ const Login = () => {
 
                                     <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
                                         <div className="mb-10">
-                                            <h1 className="font-bold text-[34px] text-gray-900">Sign In Page</h1>
+                                            <h1 className="font-bold text-[34px] text-gray-900">{title}</h1>
                                         </div>
 
                                         {/* Continue with google and twitter button  */}
@@ -46,7 +73,7 @@ const Login = () => {
                                                 <div className="w-full lg:w-[526px] mb-5">
                                                     <label htmlFor="" className="text-xs px-1">Username or email address</label>
                                                     <div className="flex">
-                                                        <Input type="email" className="pl-6 py-2 focus:outline-lightBlack w-full rounded-lg border" id='email' />
+                                                        <Input type="email" onChange={(e)=>setFormData((prev)=>({...prev , email : e.target.value}))} className="pl-6 py-2 focus:outline-lightBlack w-full rounded-lg border" id='email' />
                                                     </div>
                                                 </div>
                                             </div>
@@ -58,8 +85,9 @@ const Login = () => {
                                                     <div className="flex">
                                                         <Input type="email"
                                                             //  type={`${hide ? "password" : "text"}`} 
+                                                            onChange={(e)=>setFormData((prev)=>({...prev , password : e.target.value}))}
                                                             className="pl-6 py-2 focus:outline-lightBlack w-full rounded-lg border"
-                                                            id='password'
+                                                            id='email'
                                                         />
 
                                                     </div>
@@ -72,7 +100,7 @@ const Login = () => {
 
                                             <div className="flex -mx-3">
                                                 <div className="w-full mb-5">
-                                                    <Link to="/login" type="button" className="bg-purpleColor border text-lightGray rounded-lg text-sm px-10 py-2 text-center mr-3 md:mr-0 outline-none">Login</Link>
+                                                    <Link to="/login" type="button" onClick={handleSubmit} className=" flex items-center justify-center h-15  w-3/5 bg-purpleColor border text-lightGray rounded-lg text-sm px-10 py-2 text-center mr-3 md:mr-0 outline-none">{isLoading ?  <SyncLoader size={8} color="#fff" /> : "Login"}</Link>
                                                 </div>
                                             </div>
                                             <div className="text-lightBlack">Don't have an account?

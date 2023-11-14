@@ -10,7 +10,7 @@ const LoginNavbar = () => {
     const [hide, setHide] = useState(true)
 
     return (
-        <nav className=' border border-b-darkGray border-t-0 border-x-0 relative'>
+        <nav className='border border-b-darkGray border-t-0 border-x-0 relative'>
             <div className="bg-white container mx-auto font-titleFont  ">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
 

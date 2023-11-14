@@ -11,9 +11,9 @@ import LoginNavbar from '../components/LoginNavbar'
 const LoginWrapper = () => {
     return (
         <>
-            <LoginNavbar />
+          <LoginNavbar />
             <Routes >
-                <Route path="/login" element={<Login />}/>
+                <Route path="/login" element={<Login title= "Sign In Page" />}/>
                 <Route path="/register" element={<Register />}></Route>
                 <Route path="/check-email" element={<CheckEmail />}></Route>
                 <Route path="/reset-password" element={<ResetPassword />}></Route>
