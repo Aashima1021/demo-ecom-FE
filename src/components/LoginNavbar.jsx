@@ -19,19 +19,6 @@ const LoginNavbar = () => {
                         <img src={Logo} className="h-8 mr-3" alt="Logo" />
                     </div>
 
-                    {/* //search */}
-                    <div className="relative hidden lg:flex justify-center ">
-                        <div className="absolute bg-mediumGray text-mediumBlack rounded-lg inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <AiOutlineSearch size={20} />
-                        </div>
-                        <input
-                            type="text"
-                            id="search-navbar"
-                            className="block w-full p-2 pl-10 text-sm bg-mediumGray text-mediumBlack outline-none rounded-lg border-none"
-                            placeholder="Search"
-                        />
-                    </div>
-
                     {/* Rightsection */}
                     <div className={`${hide ? "hidden" : "visible"} bg-lightBlack flex py-12 pr-8 md:py-0 gap-4 md:gap-0 md:bg-lightGray absolute top-0 left-0 md:relative w-full md:w-2/3 lg:w-2/4 flex-col md:flex-row md:flex space-x-4`}>
                         <div className={`${hide ? "text-normal" : "text-center"}`}>

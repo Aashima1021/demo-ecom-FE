@@ -34,7 +34,7 @@ const Login = ({ title, subtitle }) => {
     console.log(formData);
     return (
         <>
-            <section className="loginForm bg-red-400 flex" >
+            <section className="loginForm flex" >
                 <div className='bg-gray-600 w-full'>
                     <>
                         <div className=" flex items-center justify-center ">

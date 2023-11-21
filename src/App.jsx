@@ -2,6 +2,7 @@ import React, { Suspense, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { SyncLoader } from "react-spinners";
 import LoginWrapper from "./layout/LoginWrapper";
+import HomeWrapper from "./layout/HomeWrapper";
 
 function App() {
   const [fire, setFire] = useState(false)
@@ -13,8 +14,9 @@ function App() {
   return (
     // <Router basename={"/euphoria/dev/app/"}>
     <Router >
+      {/* fire ? <LoginWrapper /> : */}
       {
-        fire ? <LoginWrapper /> :
+        fire ? <HomeWrapper /> :
           <div
             className="flex items-center justify-center w-full"
             style={{ height: "100vh" }}
