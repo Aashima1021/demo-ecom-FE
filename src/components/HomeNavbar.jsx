@@ -40,13 +40,13 @@ const HomeNavbar = () => {
                                 <input
                                     type="text"
                                     id="search-navbar"
-                                    className="outline-none hidden sm:flex md:hidden lg:flex pl-12 rounded-lg text-[#807D7E] bg-[#F6F6F6] py-2"
+                                    className="outline-none hidden sm:flex md:hidden lg:flex pl-12 rounded-lg text-mediumBlack bg-mediumGray py-2"
                                     placeholder="Search"
                                 />
                             </div>
-                            <button className="bg-[#F6F6F6] text-center text-[#807D7E] p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white"><FaHeart /></button>
-                            <button className="bg-[#F6F6F6] text-center text-[#807D7E] p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white"><FaShoppingCart /></button>
-                            <button className="bg-[#F6F6F6] text-center text-[#807D7E] p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white"> <FaUser /></button>
+                            <button className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white"><FaHeart /></button>
+                            <button className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white"><FaShoppingCart /></button>
+                            <button className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white"> <FaUser /></button>
                         </div>
                     </div>
 
@@ -75,7 +75,7 @@ const HomeNavbar = () => {
                         <div className="md:hidden absolute top-16 right-0 bg-white text-gray-900 w-full z-10">
                             <ul className="flex flex-col items-center gap-4 p-4">
                                 {
-                                    listItems.map((item, index) => <Link to="/productList" key={index}>{item.list}</Link>)
+                                    listItems.map((item, index) => <Link to="/productList" className="capitalize" key={index}>{item.list}</Link>)
                                 }
                                 <li className="block">
                                     {/* searchButton */}
@@ -86,21 +86,16 @@ const HomeNavbar = () => {
                                         <input
                                             type="text"
                                             id="search-navbar"
-                                            className="outline-none flex pl-12 rounded-lg text-[#807D7E] bg-[#F6F6F6] py-2"
+                                            className="outline-none flex pl-12 rounded-lg text-mediumBlack bg-mediumGray py-2"
                                             placeholder="Search"
                                         />
                                     </div>
                                 </li>
                                 <div className="flex-row items-center gap-4 p-4 flex">
-                                    <button className="bg-[#F6F6F6] text-center  text-[#807D7E] p-3 hover:text-[#807D7E] mr-2">
-                                        <FaHeart />
-                                    </button>
-                                    <button className="bg-[#F6F6F6] text-center  text-[#807D7E] p-3 hover:text-[#807D7E] mr-2">
-                                        <FaShoppingCart />
-                                    </button>
-                                    <button className="bg-[#F6F6F6] text-center  text-[#807D7E] p-3 hover:text-[#807D7E] mr-2">
-                                        <FaUser />
-                                    </button>
+                                    <button className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white"><FaHeart /></button>
+                                    <button className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white"><FaShoppingCart /></button>
+                                    <button className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white"> <FaUser /></button>
+
                                 </div>
                             </ul>
                         </div>
