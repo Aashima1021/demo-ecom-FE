@@ -5,6 +5,7 @@ import NewArrival from "../components/homeComponent/NewArrival"
 import MenCategory from "../components/homeComponent/MenCategory"
 import WomenCategory from "../components/homeComponent/WomenCategory"
 import Limelight from "../components/homeComponent/Limelight"
+import FeedbackSlider from '../components/homeComponent/FeedbackSlider'
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <MenCategory />
             <WomenCategory />
             <Limelight />
+            <FeedbackSlider />
         </>
     )
 }
