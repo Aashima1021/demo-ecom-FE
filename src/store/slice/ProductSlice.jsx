@@ -1,9 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { ProductGetService } from "../../service/api.service";
 
 
-const initialState = {}
+const initialState = {
+  products: []
+}
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async (_, { getState, dispatch }) => {
- // Api call over here of fetch products 
+  // Api call over here of fetch products 
+  const res = await ProductGetService(data)
+  console.log(res)
+  return res
 })
 
 
@@ -14,14 +20,16 @@ const productsSlice = createSlice({
     [fetchProducts.fulfilled]: (state, action) => {
       state.products = action.payload
     },
-    [fetchProducts.rejected]: (state, _) => {
+    [fetchProducts.rejected]: (state, action) => {
       state.products = []
     },
-    [fetchProducts.pending]: (state, _) => {
+    [fetchProducts.pending]: (state, action) => {
       state.products = []
     },
   },
 });
+
+
 
 export const { } = productsSlice.actions
 

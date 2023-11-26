@@ -15,6 +15,7 @@ axios.interceptors.request.use((config) => {
   }
 );
 
+//User
 export const LoginService = async (data) => {
   return await axios.post(`${VITE_BACKEND_PORT}user/signin`, data);
 };
@@ -23,4 +24,8 @@ export const RegisterService = async (data) => {
   return await axios.post(`${VITE_BACKEND_PORT}user/signup`, data);
 };
 
+//Product
+export const ProductGetService = async (data) => {
+  return await axios.get(`${VITE_BACKEND_PORT}product/get-product`, data)
+}
 

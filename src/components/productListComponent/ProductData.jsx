@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img1 from "../../assets/multipleImg/1men.png";
 import img2 from "../../assets/multipleImg/2men.png";
 import img3 from "../../assets/multipleImg/3men.png";
@@ -7,8 +7,15 @@ import img5 from "../../assets/multipleImg/5men.png";
 import img6 from "../../assets/multipleImg/6men.png";
 import img7 from "../../assets/multipleImg/7men.png";
 import img8 from "../../assets/multipleImg/8men.png";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../../store/slice/ProductSlice";
+
 
 const ProductData = () => {
+  const dispatch = useDispatch()
+  const data = useSelector((state) => state.product)
+  console.log(data)
+
   let images = [
     { src: img1, productName: "Jhanvi's Brand", name: "black Sweatshirt ", price: "$123.00" },
     { src: img2, productName: "Jhanvi's Brand", name: "Printed T-Shirts", price: "$123.00" },
@@ -26,6 +33,14 @@ const ProductData = () => {
     { src: img6, productName: "Jhanvi's Brand", name: "Activewear", price: "$123.00" },
     { src: img7, productName: "Woden's Brand", name: "Boxers", price: "$123.00" },
   ];
+
+
+
+  useEffect(() => {
+    dispatch(fetchProducts())
+  }, [dispatch])
+
+
 
   return (
     <>
