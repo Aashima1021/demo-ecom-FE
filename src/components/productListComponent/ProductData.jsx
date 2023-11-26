@@ -35,7 +35,6 @@ const ProductData = () => {
   ];
 
 
-
   useEffect(() => {
     dispatch(fetchProducts())
   }, [dispatch])
