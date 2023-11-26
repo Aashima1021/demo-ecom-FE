@@ -27,7 +27,7 @@ const HomeNavbar = () => {
                     <div className="hidden md:flex justify-between items-center w-fit">
                         <ul className="flex items-center gap-8">
                             {
-                                listItems.map((item, index) => <Link className="capitalize hover:text-mediumBlack" to="/productList" key={index}>{item.list}</Link>)
+                                listItems.map((item, index) => <Link className="capitalize outline-none hover:text-mediumBlack" to="/productList" key={index}>{item.list}</Link>)
                             }
                         </ul>
 
