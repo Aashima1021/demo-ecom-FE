@@ -5,6 +5,9 @@ import img3 from "../../assets/multipleImg/arrival3.png";
 import img4 from "../../assets/multipleImg/arrival4.png";
 import HomeTitle from '../../atoms/HomeTitle';
 const NewArrival = () => {
+
+  
+
   let images = [
     { src: img1, name: "Knitted Joggers", },
     { src: img2, name: "Full Sleeve", },

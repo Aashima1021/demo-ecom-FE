@@ -7,9 +7,17 @@ const initialState = {
 }
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async (_, { getState, dispatch }) => {
   // Api call over here of fetch products 
-  const res = await ProductGetService(data)
-  console.log(res)
-  return res
+  const response = await ProductGetService().then((res)=>{
+  console.log(res);
+  const data = res.data
+  return {
+    data
+  }
+  }).catch((err)=>{
+    console.log(err);
+  })
+
+  return response
 })
 
 
@@ -18,7 +26,7 @@ const productsSlice = createSlice({
   initialState,
   extraReducers: {
     [fetchProducts.fulfilled]: (state, action) => {
-      state.products = action.payload
+      state.products = action.payload.data
     },
     [fetchProducts.rejected]: (state, action) => {
       state.products = []

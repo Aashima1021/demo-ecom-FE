@@ -18,15 +18,19 @@
 /* //Everyday Component Bg-Img */
 
 /* //Width for FeedbackSlider.jsx */
-/* .my-custom-slide-style {
-    width: 380px !important;
-}
+.my-custom-slide-style {
+    width: 420px !important;
+} 
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     .my-custom-slide-style {
         width: 100px !important;
     }
-} */
+}  */
+/* .my-custom-slide-style{
+    margin-left: 10px ;
+    margin-right: 10px; */
+
 
 
 /* //Width for FeedbackSlider.jsx */

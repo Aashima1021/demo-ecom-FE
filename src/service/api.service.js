@@ -1,6 +1,7 @@
 import axios from "axios";
 import { getToken } from "../helper/token.helper";
-const { VITE_BACKEND_PORT } = import.meta.env
+const { VITE_BACKEND_PORT_PRODUCTION  , VITE_BACKEND_PORT_DEVELOPMENT } = import.meta.env
+const API = VITE_BACKEND_PORT_PRODUCTION  || VITE_BACKEND_PORT_DEVELOPMENT
 
 
 axios.interceptors.request.use((config) => {
@@ -17,15 +18,15 @@ axios.interceptors.request.use((config) => {
 
 //User
 export const LoginService = async (data) => {
-  return await axios.post(`${VITE_BACKEND_PORT}user/signin`, data);
+  return await axios.post(`${API}user/signin`, data);
 };
 
 export const RegisterService = async (data) => {
-  return await axios.post(`${VITE_BACKEND_PORT}user/signup`, data);
+  return await axios.post(`${API}user/signup`, data);
 };
 
 //Product
-export const ProductGetService = async (data) => {
-  return await axios.get(`${VITE_BACKEND_PORT}product/get-product`, data)
+export const ProductGetService = async () => {
+  return await axios.get(`${API}product/get-product`)
 }
 

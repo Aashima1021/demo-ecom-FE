@@ -18,7 +18,7 @@ const App = () => {
     }, [location]);
 
 
-    const LoginWrapperRoutes = ["/login", "/register", "/check-email", "/careset-passwordrt", "/verification", "/create-password"]
+    const LoginWrapperRoutes = ["/login", "/register", "/check-email", "/reset-password", "/verification", "/create-password"]
     const isLoginRoute = LoginWrapperRoutes.includes(location.pathname);
     return (
         <>

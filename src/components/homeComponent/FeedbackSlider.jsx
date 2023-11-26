@@ -30,12 +30,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
         name: `Floyd Miles`,
         review:
             "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit . Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-    },
-    {
-        img: rev2,
-        name: `Ronald Richards`,
-        review: `ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.`,
-    },
+    }
 ];
 
 
@@ -64,6 +59,13 @@ const FeedbackSlider = () => {
                     slidesToScroll: 1,
                 },
             },
+            {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
         ],
     };
 
@@ -73,7 +75,7 @@ const FeedbackSlider = () => {
             <div className=" pb-10 md:pb-20 px-10">
                 <Slider {...settings}>
                     {data.map((d, index) => (
-                        <div key={index} className="my-custom-slide-style p-[23.19px] h-[320px] relative  bg-white rounded-[10px]  border-2 border-stone-300 flex-col justify-start items-start gap-5 flex"
+                        <div key={index} className="  my-custom-slide-style p-[23.19px] h-[320px] relative  bg-white rounded-[10px]  border-2 border-stone-300 flex-col justify-start items-start gap-5  flex"
 
                         >
                             <div className="self-stretch justify-between items-start flex">
