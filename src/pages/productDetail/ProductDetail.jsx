@@ -10,12 +10,12 @@ import productDetailImg2 from "../../assets/multipleImg/productDetailImg2.png";
 import productDetailImg3 from "../../assets/multipleImg/productDetailImg3.png";
 import productDetailImgGif from "../../assets/multipleImg/productDetailImgGif.gif"
 import { RiMessage3Line } from "react-icons/ri";
-import { FaArrowRightLong, FaArrowsSpin } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 import { CiShoppingCart } from "react-icons/ci";
 import { CiCreditCard1 } from "react-icons/ci";
 import { IoShirtOutline } from "react-icons/io5";
 import { FaExpandArrowsAlt } from "react-icons/fa";
-
+import { color } from "../AllArrays/Arrays";
 
 import { CiDeliveryTruck } from "react-icons/ci";
 import HomeTitle from "../../atoms/HomeTitle";
@@ -67,7 +67,7 @@ const ProductDetail = () => {
         },
     ];
 
-    const colorData = ["#3C4242", "#EDD146 ", "#EB84B0", "#9C1F35"];
+
     const availableSizes = ["XS", "M", "L", "XL"];
     return (
         <>
@@ -152,11 +152,11 @@ const ProductDetail = () => {
                         </div>
 
                         <div className="flex justify-center md:justify-start mt-2 items-center gap-3">
-                            {colorData.map((color, index) => (
+                            {color.map((item, index) => (
                                 <div
                                     key={index}
                                     className="w-[22px] h-[22px] rounded-full bg-gray-300  cursor-pointer"
-                                    style={{ backgroundColor: color }}
+                                    style={{ backgroundColor: item.color }}
                                 />
                             ))}
                         </div>
