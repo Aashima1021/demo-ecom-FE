@@ -32,6 +32,8 @@ import img4LimLite from "../../assets/multipleImg/4.png";
 import slider3 from "../../assets/multipleImg/slideImage/slider3.png"
 import slider1 from "../../assets/multipleImg/slideImage/slider1.png"
 import slider2 from "../../assets/multipleImg/slideImage/slider2.png"
+
+
 const Price = [
   { WomenClothes: "Pick Any 4- Womens Plain T-shirt Combo", price: "₹1099" },
   { WomenClothes: "Pick Any 4- Plain Womens Boxer Combo", price: "₹1099" },
@@ -216,4 +218,4 @@ const slideImages = [
   { url: slider2 },
   { url: slider3 },
 ]
-export { Price, images, data, color, sizing, dressStyle, cartItems,imageData ,imageMen,imageWomen,imagesLimelight,slideImages};
+export { Price, images, data, color, sizing, dressStyle, cartItems, imageData, imageMen, imageWomen, imagesLimelight, slideImages };

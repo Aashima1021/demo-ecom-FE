@@ -15,11 +15,32 @@
     background-size: cover;
 }
 
-/* //Width for FeedbackSlider.jsx */
-.my-custom-slide-style {
-    width: 420px !important;
-}
 
+/* // home lowerslider  */
 .slick-slide>div {
     margin: 0 1rem;
 }
+
+/* //home upperslider */
+.slick-arrow {
+    display: none !important;
+}
+
+/* .slick-next:before {
+    content: '→' !important;
+    position: absolute !important;
+    font-size: 49px !important;
+    right: 54px !important;
+}
+
+.slick-arrow,
+.slick-prev {
+    z-index: 1 !important;
+}
+
+.slick-prev:before {
+    content: '←' !important;
+    position: absolute !important;
+    font-size: 49px !important;
+    left: 54px !important;
+} */
