@@ -4,26 +4,41 @@
 
 /* //Everyday Component Bg-Img */
 .bg-img1 {
-    background-image: url("./assets/multipleImg/everyday1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("./assets/multipleImg/everyday1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg-img2 {
-    background-image: url("./assets/multipleImg/everyday2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("./assets/multipleImg/everyday2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-
 /* // home lowerslider  */
-.slick-slide>div {
-    margin: 0 1rem;
+.slick-slide > div {
+  margin: 0 1rem;
 }
 
 /* //home upperslider */
 .slick-arrow {
-    display: none !important;
+  display: none !important;
+}
+.billing-width {
+  width: 952px;
+}
+.order-summary-width {
+  width: 584px;
+}
+@media (max-width: 1200px) {
+  .billing-width {
+    width: 100%;
+    
+  }
+  .order-summary-width {
+    width: 100%;
+    display: block;
+  }
 }
 
 /* .slick-next:before {
