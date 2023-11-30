@@ -14,9 +14,9 @@ function App() {
   return (
     // <Router basename={"/euphoria/dev/app/"}>
     <Router >
-      {/* fire ? <LoginWrapper /> : */}
+      {/* fire ? <HomeWrapper /> : */}
       {
-        fire ? <HomeWrapper /> :
+        fire ? <LoginWrapper /> :
           <div
             className="flex items-center justify-center w-full"
             style={{ height: "100vh" }}
