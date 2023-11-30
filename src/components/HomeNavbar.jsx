@@ -100,13 +100,13 @@ const HomeNavbar = () => {
                                     </div>
                                 </li>
                                 <div className="flex-row items-center gap-4 p-4 flex">
-                                    <Link to="/wishlist" className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white">
+                                    <Link to="/wishlist" onClick={() => setIsMenuOpen(!isMenuOpen)} className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white">
                                         <FaHeart />
                                     </Link>
-                                    <Link to="/cart" className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white">
+                                    <Link to="/cart" onClick={() => setIsMenuOpen(!isMenuOpen)} className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white">
                                         <FaShoppingCart />
                                     </Link>
-                                    <Link to="/contactDetails" className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white">
+                                    <Link to="/contactDetails" onClick={() => setIsMenuOpen(!isMenuOpen)} className="bg-mediumGray text-center text-mediumBlack p-3 rounded-lg mr-2 hover:bg-purpleColor hover:text-white">
                                         <FaUser />
                                     </Link>
 

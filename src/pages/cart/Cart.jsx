@@ -264,9 +264,9 @@ const Cart = () => {
           <div className=" w-[0px] md:w-[465px] h-[0px] border mt-5 border-stone-300 "></div>
 
           <div className="flex justify-center ">
-            <button className="border items-center px-4 py-2  border-spacing-2 mt-4 text-center rounded-lg text-white font-semibold  bg-[#8A33FD]">
+            <Link to="/checkout" className="border items-center px-4 py-2  border-spacing-2 mt-4 text-center rounded-lg text-white font-semibold  bg-[#8A33FD]">
               Proceed To Checkout
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -14,17 +14,17 @@ function App() {
   return (
     // <Router basename={"/euphoria/dev/app/"}>
     <Router >
-      {/* fire ? <HomeWrapper /> : */}
+      {/* fire ? <LoginWrapper /> : */}
       {
-        fire ? <LoginWrapper /> :
-          <div
+        fire ? <HomeWrapper /> :
+          < div
             className="flex items-center justify-center w-full"
             style={{ height: "100vh" }}
           >
             <SyncLoader size={18} color="#8A33FD" />
           </div>
       }
-    </Router>
+    </Router >
   );
 }
 

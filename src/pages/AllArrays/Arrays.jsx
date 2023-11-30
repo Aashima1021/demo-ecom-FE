@@ -282,7 +282,7 @@ const formArray = [
     placeholder: "First Name",
   },
   {
-    formLabel: "last Name*",
+    formLabel: "Last Name*",
     placeholder: "Last Name",
   },
   {
@@ -318,6 +318,8 @@ const formArray = [
     placeholder: "Phone",
   },
 ];
+
+
 export {
   Price,
   images,
